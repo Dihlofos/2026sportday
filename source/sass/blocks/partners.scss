@@ -1,0 +1,46 @@
+.partners {
+  position: relative;
+  padding: 11.2rem 0 10rem;
+
+  @media (max-width: $tablet) {
+    padding: 6.2rem 0 4rem;
+  }
+
+  &__title {
+    margin: 0 0 11.1rem;
+  }
+
+  &__decor {
+    position: absolute;
+    top: 0;
+    right: -1rem;
+    z-index: 0;
+
+    @media (max-width: 1700px) {
+      right: -9rem;
+      width: 60rem;
+    }
+
+    @media(max-width: $laptop) {
+      width: 53rem;
+    }
+
+    @media (max-width: $tablet) {
+      width: 35rem;
+    }
+
+    @media (max-width: $mobile) {
+      display: none;
+    }
+  }
+
+  &__logos {
+    display: flex;
+    justify-content: flex-start;
+    gap: 7rem;
+
+    @media (max-width: $mobile) {
+      gap: 2rem;
+    }
+  }
+}

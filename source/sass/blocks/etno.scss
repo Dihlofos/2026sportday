@@ -1,0 +1,191 @@
+.etno {
+  position: relative;
+  background: linear-gradient(351deg, #E51F2F 0.55%, #94191B 154.01%);
+  padding: 11.1rem 0 21.5rem;
+  overflow: hidden;
+
+  @media (max-width: $tablet) {
+    padding: 6rem 0 8rem;
+  }
+
+  @media(max-width: $mobile) {
+    padding: 3rem 0 4rem;
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__title {
+    margin: 0 0 8.6rem;
+
+    @media(max-width: $mobile) {
+      margin: 0px 0 5.6rem;
+    }
+  }
+
+  &__decor {
+    position: absolute;
+    bottom: 0;
+    left: -0.3rem;
+    z-index: 0;
+
+    @media (max-width: 1750px) {
+      width: 58rem;
+    }
+
+    @media (max-width: $desktop) {
+      left: -10rem;
+    }
+
+    &--right {
+      left: auto;
+      right: -1rem;
+
+      @media (max-width: $desktop) {
+        right: -10rem;
+      }
+    }
+
+    @media (max-width: $tablet) {
+      display: none;
+    }
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    gap: 4.1rem;
+    padding: 0 6rem;
+
+    @media (max-width: $tablet) {
+      padding: 0;
+      gap: 2.1rem;
+    }
+
+  }
+
+  &__slider-wrapper {
+    align-items: stretch;
+
+    @media (max-width: $mobile) {
+      margin-left: -1.6rem;
+      padding-left: 1.6rem;
+      margin-right: -1.6rem;
+      overflow-x: auto;
+      gap: 1.6rem;
+
+      &::-webkit-scrollbar {
+        -webkit-appearance: none;
+        width: 0;
+        height: 0;
+        display: none;
+      }
+    }
+  }
+
+  &__slider-arrow {
+    flex-shrink: 0;
+    img {
+      width: 5rem;
+    }
+
+    @media (max-width: $mobile) {
+      display: none;
+
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+    position: relative;
+    border-radius: 30px;
+    background-color: $black;
+    padding: 2.4rem 1.8rem;
+    color: $white;
+    min-height: 27.4rem;
+
+    &--no-register {
+      .etno__card-link {
+        display: none;
+      }
+
+      .etno__no-register {
+        display: block;
+      }
+    }
+
+    @media (max-width: $mobile) {
+      width: 30rem;
+    }
+  }
+
+  &__no-register {
+    display: none;
+    margin-top: 0.8rem;
+    font-size: 1.6rem;
+    line-height: 1;
+    text-align: center;
+  }
+
+  &__card-title {
+    font-family: $mossport;
+    text-transform: uppercase;
+    font-size: 3rem;
+    line-height: 1.01;
+    margin: 0 0 1.5rem;
+    text-align: center;
+  }
+
+  &__card-text {
+    text-align: center;
+    font-size: 1.6rem;
+    line-height: 1.1;
+  }
+
+  &__card-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    width: 20.7rem;
+    margin: 0 auto;
+  }
+
+  &__card-time {
+    font-family: $mossport;
+    text-transform: uppercase;
+    width: 100%;
+    padding: 0rem 0;
+    border: 1px solid $red;
+    border-radius: 30px;
+    text-align: center;
+    font-size: 2.5rem;
+    line-height: 0.92;
+
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &__card-image {
+    margin: 0 0 1.8rem;
+  }
+
+  &__card-link {
+    display: block;
+    background-color: $red;
+    color: $white;
+    font-size: 1.6rem;
+    width: 100%;
+    border-radius: 30px;
+    padding: 0.3rem 1.6rem;
+    text-align: center;
+    text-decoration: none;
+  }
+}

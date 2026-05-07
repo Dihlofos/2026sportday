@@ -1,0 +1,461 @@
+.map {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(351deg, #E51F2F 0.55%, #94191B 154.01%), #E51F2F;
+
+  svg,button {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  @media (max-width: $tablet) {
+    padding: 1.6rem 0 6.8rem;
+  }
+
+  @media (max-width: $mobile) {
+    padding: 2.2rem 0 9.3rem;
+
+    .container {
+      padding: 0;
+    }
+  }
+  .container {
+    position: relative;
+    padding: 11.2rem 0 17rem;
+
+    @media (max-width: $tablet) {
+      padding: 1.6rem 2.4rem 0;
+    }
+
+    @media (max-width: $mobile) {
+      padding: 1.6rem 0 0;
+    }
+  }
+
+  &__grey {
+    position: absolute;
+    top: 0;
+    right: -583.1%;
+    width: 600%;
+    height: 100%;
+    background-color: $grey;
+    z-index: 2;
+
+    @media (max-width: $tablet) {
+      display: none;
+    }
+  }
+
+  &__decor {
+    position: absolute;
+    top: 5.4rem;
+    right: -45.7rem;
+    z-index: 7;
+
+    @media (max-width: $laptop) {
+      top: 16.4rem;
+    }
+  }
+
+  &__title {
+    margin: 0;
+
+    @media (max-width: $mobile) {
+      margin-left: 1.6rem;
+    }
+  }
+
+  &__map {
+    position: relative;
+    width: 108.1%;
+    max-width: 179.6rem;
+    margin-left: 34.5%;
+    margin-top: -2.4rem;
+    z-index: 7;
+
+    @media (max-width: 1680px) {
+      width: 131%;
+      margin-top: 2.4rem;
+      margin-left: 19.8%;
+    }
+
+
+    @media (max-width: $tablet) {
+      margin: 0;
+      max-width: 114.2rem;
+      width: 160%;
+      margin-top: -3.25rem;
+      margin-left: -3.8rem;
+    }
+
+    @media (max-width: $mobile) {
+      max-width: 124.2rem;
+      width: 250%;
+    }
+  }
+
+  &__map-content {
+    @media (max-width: $tablet) {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+  }
+
+  &__map-wrapper {
+    @media (max-width: $mobile) {
+      overflow-x: auto;
+      padding-top: 5.3rem;
+
+      &::-webkit-scrollbar {
+        -webkit-appearance: none;
+        width: 0;
+        height: 0;
+        display: none;
+      }
+    }
+
+  }
+
+  &__under {
+    user-select: none;
+    img {
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__scheme {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+      g {
+        position: relative;
+        cursor: pointer;
+        z-index: 2;
+
+        &.is-active {
+          z-index: 5;
+          rect,
+          .rect {
+            fill: $red;
+            stroke: $white;
+          }
+
+          path {
+            fill: $white;
+          }
+        }
+      }
+  }
+
+  &__modal {
+    position: absolute;
+    top: 29rem;
+    left: 36rem;
+    z-index: 115;
+    width: 37.2rem;
+    background-color: $purple;
+    color: $white;
+    padding: 2.6rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 30px;
+
+    &.is-active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    @media (max-width: $tablet) {
+      width: 33.5rem;
+      padding: 2.5rem 2.4rem;
+      top: 7.7rem;
+      left: 4.5rem;
+      border-radius: 30px;
+    }
+
+    @media (max-width: $mobile) {
+      width: calc(100% - 3.2rem);
+      //padding: 3.6rem;
+      top: 26.7rem;
+      left: 1.6rem;
+    }
+
+  }
+
+  &__modal-title {
+    font-size: 3rem;
+    line-height: 1;
+    text-transform: uppercase;
+    font-family: $mossport;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    margin: 0 0 3.6rem;
+    max-width: 85%;
+
+    @media (max-width: $tablet) {
+      font-size: 3.4rem;
+    }
+
+    @media (max-width: $mobile) {
+      margin: 0 0 1.6rem;
+    }
+  }
+
+  &__modal-close {
+    position: absolute;
+    top: 2.6rem;
+    right: 2.3rem;
+    padding: 0;
+    margin: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: $white;
+
+    @media (max-width: $tablet) {
+      top: 1.8rem;
+      right: 1.8rem;
+      width: 3rem;
+      height: 3rem;
+
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  &__modal-goto {
+    cursor: pointer;
+
+    &.is-hidden {
+      display: none;
+    }
+
+    @media (max-width: $tablet) {
+      font-size: 2rem;
+    }
+
+    @media (max-width: $mobile) {
+    }
+  }
+
+  &__decor-mobile {
+    display: none;
+
+    @media (max-width: $mobile) {
+      position: absolute;
+      top: -7rem;
+      left: -6.7rem;
+      display: block;
+    }
+  }
+
+  &__map-content {
+    position: relative;
+    display: flex;
+
+    @media (max-width: $tablet) {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+  }
+
+
+
+  &__mobile-more {
+    display: none;
+    font-family: $mossport;
+    color: $purple;
+    text-transform: uppercase;
+    font-size: 2.4rem;
+    line-height: 1;
+    cursor: pointer;
+    margin-left: 1.8rem;
+
+    .more-hide & {
+      @media (max-width: $tablet) {
+        display: block;
+      }
+    }
+
+    @media (max-width: $mobile) {
+      margin-left: 1.6rem;
+      margin-top: 0.4rem;
+    }
+
+
+  }
+
+  &__list-container {
+    position: absolute;
+    width: 36%;
+    height: 60.3rem;
+    margin: 8.1rem 0 0;
+    left: -0.6rem;
+    top:0;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0.6rem;
+      width: 1px;
+      height: 100%;
+      background-color: $white;
+      z-index: 1;
+    }
+
+    @media (max-width: $tablet) {
+      position: static;
+      width: 100%;
+      height: auto;
+      margin: 0;
+      &:before {
+        display: none;
+      }
+    }
+  }
+
+   &__list-wrapper {
+    overflow: auto;
+    height: 60.3rem;
+    z-index: 59;
+    list-style: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    &::-webkit-scrollbar {
+      width: 15px;
+    }
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $purple;
+      border: 3px solid transaprent;
+      border-radius: 7px;
+      background-clip: content-box;
+    }
+
+    @media (max-width: $tablet) {
+      position: relative;
+      align-self: center;
+      width: 80%;
+      overflow: hidden;
+      height: auto;
+    }
+
+    @media (max-width: $mobile) {
+      width: 100%;
+    }
+
+  }
+
+  &__list {
+    height: 100%;
+    padding-left: 3rem;
+    margin: 0;
+
+    @media (max-width: $tablet) {
+      position: relative;
+      width: 100%;
+      padding: 0;
+      margin-top: 3rem;
+      overflow: auto;
+
+      .more-hide & {
+        height: 35rem;
+        overflow: hidden;
+
+        &:after {
+          content: '';
+          opacity: 1;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          height: 7.6rem;
+          width: 100%;
+          background: linear-gradient(180deg,rgba(255, 255, 255, 0) 0%, $red 89%, $red 100%);
+          z-index: 60;
+          pointer-events: none;
+          transition: opacity 0.15s ease-in-out;
+        }
+      }
+    }
+
+    @media (max-width: $mobile) {
+      margin-top: 2.4rem;
+      padding: 0 1.6rem 0;
+      max-height: initial;
+    }
+  }
+
+  &__mobile-arrows {
+    display: none;
+
+    @media (max-width: $mobile) {
+      display: block;
+      margin: 2.3rem auto 0;
+    }
+
+  }
+
+  &__list-item {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    color: $white;
+    font-size: 2.4rem;
+    line-height: 3rem;
+    font-family: $mossport;
+    text-transform: uppercase;
+    margin: 0 0 0.9rem;
+    padding-left: 6.1rem;
+    padding-right: 2.5rem;
+    cursor: pointer;
+    border-radius: 15px;
+    width: fit-content;
+
+    &.is-active,
+    &:hover {
+      background-color: $purple;
+      color: $white;
+    }
+
+    p {
+      margin: 0;
+      position: relative;
+    }
+
+    span {
+      position: absolute;
+      left: 2rem;
+      top: 0;
+      font-size: 2.4rem;
+      color: $white
+    }
+
+    @media (max-width: $tablet) {
+      font-size: 2.4rem;
+      line-height: 3rem;
+      height: auto;
+      margin: 0 0 0.9rem;
+
+      span {
+        font-size: 2.4rem;
+      }
+    }
+  }
+}

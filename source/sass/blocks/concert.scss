@@ -1,0 +1,219 @@
+.concert {
+  position: relative;
+  background: linear-gradient(180deg, #312783 3.47%, #1C1C3A 93.06%);
+  overflow: hidden;
+  padding: 10.9rem 0 15.9rem;
+
+  @media (max-width: $tablet) {
+    padding: 6rem 0 8rem;
+  }
+
+  &__decor {
+    position: absolute;
+    z-index: 0;
+    user-select: none;
+    pointer-events: none;
+    z-index: 0;
+
+    &--right {
+      top: 0;
+      right: -1rem;
+
+      @media(max-width: $laptop) {
+        right: -34rem;
+      }
+
+      @media (max-width: $mobile) {
+        right: 0rem;
+        width: 23rem;
+      }
+    }
+
+    &--left {
+      bottom: 0;
+      left: 0;
+
+      @media(max-width: $laptop) {
+        display: none;
+      }
+    }
+  }
+
+  &__top {
+    display: flex;
+    align-items: flex-start;
+    gap: 3.6rem;
+    margin: 0 0 8.2rem;
+
+    @media (max-width: $mobile) {
+      margin: 0 0 5.2rem;
+    }
+  }
+
+  &__title {
+    margin: 0;
+  }
+
+  &__label {
+    color: $white;
+    font-family: $mossport;
+    font-size: 3rem;
+    line-height: 1;
+    text-transform: uppercase;
+    background-color: $red;
+    padding: 0.8rem 1.8rem;
+    margin-top: 2.4rem;
+    border-radius: 30px;
+
+    @media (max-width: $tablet) {
+      margin-top: 0.5rem;
+    }
+
+    @media (max-width: $mobile) {
+      font-size: 2.4rem;
+      margin: 0;
+    }
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+    position: relative;
+    border-radius: 30px;
+    background-color: $red;
+    padding: 2.6rem;
+    color: $white;
+    min-height: 28.4rem;
+
+    &--no-register {
+      .locations__card-link {
+        display: none;
+      }
+
+      .locations__no-register {
+        display: block;
+      }
+    }
+
+    @media(max-width: $mobile) {
+      width: 26rem;
+    }
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    gap: 4.1rem;
+    padding: 0 6rem;
+
+    @media(max-width: $tablet) {
+      padding: 0;
+      gap: 2rem;
+    }
+  }
+
+  &__slider-wrapper {
+    align-items: stretch;
+
+    @media(max-width: $mobile) {
+      margin-left: -2.4rem;
+      padding-left: 2.4rem;
+      margin-right: -1.6rem;
+      overflow-x: auto;
+      gap: 1.6rem;
+      overflow-x: auto;
+
+      &::-webkit-scrollbar {
+        -webkit-appearance: none;
+        width: 0;
+        height: 0;
+        display: none;
+      }
+    }
+  }
+
+  &__slider-arrow {
+    flex-shrink: 0;
+    margin-bottom: 3.3rem;
+
+    img {
+      width: 5rem;
+      height: 5rem;
+    }
+
+    @media(max-width: $mobile) {
+      display: none;
+    }
+  }
+
+  &__no-register {
+    display: none;
+    margin-top: 0.8rem;
+    font-size: 1.6rem;
+    line-height: 1;
+    text-align: center;
+
+  }
+
+  &__card-title {
+    font-family: $mossport;
+    text-transform: uppercase;
+    font-size: 3rem;
+    line-height: 1.01;
+    margin: 0 0 1.8rem;
+    text-align: center;
+    padding: 0 2rem;
+
+  }
+
+  &__card-text {
+    text-align: center;
+    font-size: 1.6rem;
+    line-height: 1.1;
+    margin-top: 1.8rem;
+  }
+
+  &__card-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    width: 20.7rem;
+    margin: 0 auto;
+  }
+
+  &__card-time {
+    font-family: $mossport;
+    text-transform: uppercase;
+    width: 100%;
+    padding: 0 0;
+    border: 1px solid $white;
+    border-radius: 30px;
+    text-align: center;
+    font-size: 2.5rem;
+    line-height: 0.92;
+
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &__card-image {
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}

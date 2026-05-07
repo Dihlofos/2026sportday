@@ -1,0 +1,332 @@
+.locations {
+  position: relative;
+  padding: 10.9rem 0 8.7rem;
+  background: linear-gradient(180deg, #1C1C3A 3.47%, #312783 93.06%);
+
+  @media (max-width: $mobile) {
+    padding: 3.9rem 0 3.7rem;
+  }
+
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+
+  &__title {
+    margin: 0 0 4.4rem;
+  }
+
+  &__decor {
+    position: absolute;
+    z-index: 0;
+
+    &--left {
+      bottom: 0;
+      left: 0;
+
+      @media(max-width:$desktop) {
+        width: 30rem;
+        bottom: -10rem;
+        left: -15rem;
+      }
+
+      @media(max-width:$laptop) {
+        bottom: -15rem;
+        left: -19rem;
+      }
+      @media (max-width: $tablet) {
+        display: none;
+      }
+    }
+
+    &--right {
+      right: -1rem;
+      top: 0;
+
+      @media(max-width:$desktop) {
+        width: 60rem;
+      }
+
+      @media (max-width: $laptop) {
+        width: 56rem;
+      }
+
+      @media (max-width: $tablet) {
+        width: 48rem;
+      }
+
+      @media (max-width: $mobile) {
+        width: 23rem;
+        top: 1.6rem;
+      }
+    }
+  }
+
+  &__description {
+    display: flex;
+    align-items: center;
+    gap: 1.3rem;
+    font-size: 1.6rem;
+    line-height: 1.1;
+    margin: 0 0 15.5rem;
+
+    @media (max-width: $laptop) {
+      margin: 0px 0 5.5rem;
+    }
+
+    @media (max-width: $mobile) {
+      margin: 0 0 1.5rem;
+    }
+  }
+
+  &__toggler {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: fit-content;
+    font-size: 5rem;
+    line-height: 1.01;
+    color: $white;
+    text-transform: uppercase;
+    font-family: $mossport;
+    gap: 3.2rem;
+    padding-top: 3.9rem;
+    cursor: pointer;
+
+    @media (max-width: $mobile) {
+      font-size: 2.2rem;
+      padding-top: 2rem;
+    }
+  }
+
+  &__item {
+    padding-bottom: 3.8rem;
+    border-bottom: 1px solid $white;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    @media (max-width: $mobile) {
+      padding-bottom: 2rem;
+    }
+  }
+
+  &__content {
+    display: none;
+    padding-top: 4.2rem;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4.1rem;
+
+    .is-active & {
+      display: grid;
+    }
+
+    @media (max-width: $tablet) {
+      gap: 2rem;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &--3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    &--1 {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    &--2 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &--slider {
+      align-items: center;
+      gap: 4.5rem;
+      padding: 3.4rem 6.4rem 0;
+
+      .is-active & {
+        display: flex;
+      }
+
+      @media (max-width: $tablet) {
+        padding: 3.4rem 0 0;
+        gap: 2rem;
+      }
+
+      @media (max-width: $mobile) {
+        .locations__card {
+          width: 20rem
+        }
+      }
+    }
+
+    @media (max-width: $mobile) {
+      position: relative;
+      margin: 0 -1.6rem;
+      padding: 2rem 1.6rem 0;
+      overflow-x: auto;
+      overflow-y: visible;
+      flex-wrap: nowrap;
+      grid-template-columns: repeat(4, 1fr);
+
+      &::-webkit-scrollbar {
+        -webkit-appearance: none;
+        width: 0;
+        height: 0;
+        display: none;
+      }
+    }
+
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+    position: relative;
+    border-radius: 30px;
+    background-color: $black;
+    padding: 2.6rem 1.8rem;
+    color: $white;
+
+    &--no-register {
+      .locations__card-link {
+        display: none;
+      }
+
+      .locations__no-register {
+        display: block;
+      }
+    }
+
+    @media (max-width: $tablet) {
+      padding: 1.8rem;
+    }
+  }
+
+  &__no-register {
+    display: none;
+    margin-top: 0.8rem;
+    font-size: 1.6rem;
+    line-height: 1;
+    text-align: center;
+
+  }
+
+  &__card-title {
+    font-family: $mossport;
+    text-transform: uppercase;
+    font-size: 3rem;
+    line-height: 1.01;
+    margin: 0 0 1.8rem;
+    text-align: center;
+
+    @media (max-width: $mobile) {
+      font-size: 2.4rem;
+    }
+  }
+
+  &__card-text {
+    text-align: center;
+    font-size: 1.6rem;
+    line-height: 1.1;
+    max-width: 27.2rem;
+    margin: 1.8rem auto 0;
+
+    @media (max-width: $mobile) {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__card-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    width: 20.7rem;
+    margin: 0 auto;
+
+    @media (max-width: $tablet) {
+      width: 17.8rem;
+    }
+  }
+
+  &__card-time {
+    font-family: $mossport;
+    text-transform: uppercase;
+    width: 100%;
+    border: 1px solid $red;
+    border-radius: 30px;
+    text-align: center;
+    font-size: 2.5rem;
+    line-height: 1;
+    width: 20.8rem;
+    margin: 0 auto;
+
+    p {
+      margin: 0;
+    }
+
+    @media (max-width: $tablet) {
+      width: 17.8rem;
+    }
+  }
+
+  &__card-image {
+    margin: 0 0 1.8rem;
+  }
+
+  &__card-link {
+    display: block;
+    background-color: $red;
+    color: $white;
+    font-size: 1.6rem;
+    width: 100%;
+    border-radius: 30px;
+    padding: 0.3rem 1.6rem;
+    text-align: center;
+    text-decoration: none;
+
+    @media (max-width: $tablet) {
+      width: 17.8rem;
+    }
+  }
+
+  &__arrow {
+    transform: rotate(180deg);
+    user-select: none;
+
+    .is-active & {
+      transform: rotate(0);
+    }
+
+    @media (max-width: $mobile) {
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+
+  &__slider-arrow {
+    flex-shrink: 0;
+
+    @media (max-width: $mobile) {
+      display: none;
+    }
+  }
+
+  &__slider-wrapper {
+    @media (max-width: $mobile) {
+      gap: 2rem;
+      overflow: auto;
+
+      &::-webkit-scrollbar {
+        -webkit-appearance: none;
+        width: 0;
+        height: 0;
+        display: none;
+      }
+    }
+  }
+
+}

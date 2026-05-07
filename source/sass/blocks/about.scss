@@ -1,0 +1,132 @@
+.about {
+  position: relative;
+  padding: 11rem 0 13.5rem;
+  z-index: 11;
+  background: linear-gradient(180deg, #312783 3.47%, #1C1C3A 93.06%), #0C0E1A;
+
+
+  @media (max-width: $tablet) {
+    padding: 6rem 0;
+  }
+
+
+  &__title {
+    position: relative;
+    margin: 0 0 5.1rem;
+    z-index: 2;
+  }
+
+  &__decor {
+    position: absolute;
+    z-index: 0;
+    right: 10rem;
+    top: 0;
+
+    @media (max-width: $desktop) {
+      right: -10rem;
+    }
+
+    @media(max-width: $laptop) {
+      width: 60rem;
+    }
+
+    @media (max-width: $tablet) {
+      width: 45rem;
+      right: -15rem;
+    }
+  }
+
+  &__line {
+    display: flex;
+    justify-content: center;
+    margin: 12.3rem 0 13rem;
+    img {
+      max-width: unset;
+    }
+
+    @media (max-width: $tablet) {
+      margin: 6rem 0 6rem;
+      img {
+        width: 188%;
+      }
+    }
+
+    @media (max-width: $mobile) {
+      margin: 4rem 0;
+      position: relative;
+      right: -1.3rem;
+
+      img {
+        width: 230%;
+      }
+    }
+
+
+  }
+
+  &__bullits {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4rem;
+
+    @media (max-width: $tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: $mobile) {
+      gap: 2rem;
+    }
+  }
+
+  &__description {
+    position: relative;
+    max-width: 68.3rem;
+    line-height: 1.2;
+    z-index: 2;
+
+    p {
+      margin: 0 0 1.2rem;
+    }
+  }
+
+  &__bullit {
+    background-color: $red;
+    color: $white;
+    border-radius: 30px;
+    padding: 2.6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: center;
+    align-items: center;
+
+    @media (max-width: $mobile) {
+      padding: 1.6rem;
+    }
+  }
+
+  &__bullit-title {
+    text-align: center;
+    font-family: $mossport;
+    font-size: 3rem;
+    line-height: 1.01;
+    text-transform: uppercase;
+    margin: 0 0 1.6rem;
+    max-width: 19rem;
+
+    @media (max-width: $mobile) {
+      font-size: 2.4rem;
+    }
+  }
+
+  &__bullit-text {
+    font-size: 1.6rem;
+    line-height: 1.1;
+
+    @media (max-width: $mobile) {
+      font-size: 1.4rem;
+    }
+
+  }
+
+}
