@@ -5,6 +5,6 @@ Simple landing page with simple gulp build
 `npm run start` for start developing
 `npm run build` for build
 
-To see website go to [link](https://dihlofos.github.io/2026sporday/build/)
+To see website go to [link](https://dihlofos.github.io/2026sportday/build/)
 
 production [link](https://day.sport.mos.ru)
