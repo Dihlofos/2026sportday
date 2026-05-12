@@ -8,6 +8,10 @@
     padding-top: 3rem;
   }
 
+  @media(max-width: $mobile) {
+    padding-top: 1.5rem;
+  }
+
   .container {
     position: relative;
   }
@@ -26,6 +30,10 @@
         width: 32rem;
         right: 0;
         transform: scaleX(-1);
+      }
+
+      @media (max-width: $mobile) {
+        display: none;
       }
     }
 
@@ -94,6 +102,7 @@
 
     @media (max-width: $mobile) {
       width: 100%;
+      padding-bottom: 4.4rem;
     }
   }
 

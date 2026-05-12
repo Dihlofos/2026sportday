@@ -112,15 +112,11 @@
     }
   }
 
-  &__content {
-    display: none;
-    padding-top: 4.2rem;
+  &__cards {
+    display: grid;
+
     grid-template-columns: repeat(4, 1fr);
     gap: 4.1rem;
-
-    .is-active & {
-      display: grid;
-    }
 
     @media (max-width: $tablet) {
       gap: 2rem;
@@ -139,6 +135,38 @@
       grid-template-columns: repeat(2, 1fr);
     }
 
+
+    @media (max-width: $mobile) {
+      position: relative;
+      margin: 0 -1.6rem;
+      padding: 2rem 1.6rem 0;
+      overflow-x: auto;
+      overflow-y: visible;
+      flex-wrap: nowrap;
+      grid-template-columns: repeat(4, 1fr);
+
+      .locations__card {
+          width: 20rem
+        }
+
+      &::-webkit-scrollbar {
+        -webkit-appearance: none;
+        width: 0;
+        height: 0;
+        display: none;
+      }
+    }
+
+  }
+
+  &__content {
+    display: none;
+    padding-top: 4.2rem;
+
+    .is-active & {
+      display: block;
+    }
+
     &--slider {
       align-items: center;
       gap: 4.5rem;
@@ -152,31 +180,14 @@
         padding: 3.4rem 0 0;
         gap: 2rem;
       }
-
-      @media (max-width: $mobile) {
-        .locations__card {
-          width: 20rem
-        }
-      }
     }
+  }
 
-    @media (max-width: $mobile) {
-      position: relative;
-      margin: 0 -1.6rem;
-      padding: 2rem 1.6rem 0;
-      overflow-x: auto;
-      overflow-y: visible;
-      flex-wrap: nowrap;
-      grid-template-columns: repeat(4, 1fr);
-
-      &::-webkit-scrollbar {
-        -webkit-appearance: none;
-        width: 0;
-        height: 0;
-        display: none;
-      }
+  &__text {
+    margin: 0 0 4rem;
+    p:not(:last-child) {
+      margin: 0 0 2rem;
     }
-
   }
 
   &__card {
@@ -189,6 +200,7 @@
     background-color: $black;
     padding: 2.6rem 1.8rem;
     color: $white;
+    height: stretch;
 
     &--no-register {
       .locations__card-link {
@@ -227,12 +239,32 @@
     }
   }
 
+  &__card-images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 2rem;
+    img {
+      border-radius: 10px;
+    }
+
+  }
+
   &__card-text {
     text-align: center;
     font-size: 1.6rem;
     line-height: 1.1;
     max-width: 27.2rem;
     margin: 1.8rem auto 0;
+
+    ul {
+      padding-left: 2rem;
+      line-height: 1.3;
+    }
+
+    &--left {
+      text-align: left;
+    }
 
     @media (max-width: $mobile) {
       font-size: 1.4rem;
