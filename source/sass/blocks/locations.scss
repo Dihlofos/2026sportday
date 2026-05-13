@@ -248,6 +248,11 @@
       border-radius: 10px;
     }
 
+    &--1 {
+      display: flex;
+      justify-content: center;
+    }
+
   }
 
   &__card-text {

@@ -66,30 +66,32 @@
 
   &__map {
     position: relative;
-    width: 108.1%;
+    width: 148.1%;
     max-width: 179.6rem;
-    margin-left: 34.5%;
-    margin-top: -2.4rem;
+    margin-left: 29.5%;
+    margin-top: -10.4rem;
     z-index: 7;
 
     @media (max-width: 1680px) {
-      width: 131%;
-      margin-top: 2.4rem;
-      margin-left: 19.8%;
+      width: 130%;
+      margin-top: -6.6rem;
+      margin-left: 28.8%;
     }
 
 
     @media (max-width: $tablet) {
       margin: 0;
-      max-width: 114.2rem;
-      width: 160%;
+      max-width: 140.2rem;
+      width: 193%;
       margin-top: -3.25rem;
-      margin-left: -3.8rem;
+      margin-left: -18.8rem;
     }
 
     @media (max-width: $mobile) {
       max-width: 124.2rem;
       width: 250%;
+      margin-top: -3.25rem;
+      margin-left: -3.8rem;
     }
   }
 
@@ -157,7 +159,7 @@
     top: 29rem;
     left: 36rem;
     z-index: 115;
-    width: 37.2rem;
+    width: 42.2rem;
     background-color: $purple;
     color: $white;
     padding: 2.6rem;
