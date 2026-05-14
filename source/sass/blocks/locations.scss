@@ -123,6 +123,10 @@
       grid-template-columns: repeat(2, 1fr);
     }
 
+    @media(max-width: $mobile) {
+      display: flex;
+    }
+
     &--3 {
       grid-template-columns: repeat(3, 1fr);
     }
@@ -146,7 +150,7 @@
       grid-template-columns: repeat(4, 1fr);
 
       .locations__card {
-          width: 20rem
+          width: 22rem;
         }
 
       &::-webkit-scrollbar {
@@ -177,9 +181,13 @@
       }
 
       @media (max-width: $tablet) {
-        padding: 3.4rem 0 0;
+        padding: 2.4rem 0 0;
         gap: 2rem;
       }
+    }
+
+    @media (max-width: $mobile) {
+      padding-top: 2rem;
     }
   }
 
@@ -187,6 +195,15 @@
     margin: 0 0 4rem;
     p:not(:last-child) {
       margin: 0 0 2rem;
+    }
+
+    @media (max-width: $mobile) {
+      margin: 0 0 0rem;
+      font-size: 1.4rem;
+
+      p {
+        margin: 0 0 0rem;
+      }
     }
   }
 
@@ -251,6 +268,11 @@
     &--1 {
       display: flex;
       justify-content: center;
+    }
+
+    @media (max-width: $mobile) {
+      display: flex;
+      flex-direction: column;
     }
 
   }
@@ -354,8 +376,15 @@
 
   &__slider-wrapper {
     @media (max-width: $mobile) {
-      gap: 2rem;
+      gap: 1.4rem;
       overflow: auto;
+      margin: 0 -1.6rem;
+      padding: 0 1.6rem;
+
+      .locations__card {
+        width: 22rem;
+        padding: 1.4rem;
+      }
 
       &::-webkit-scrollbar {
         -webkit-appearance: none;
