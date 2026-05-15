@@ -217,7 +217,7 @@
     background-color: $black;
     padding: 2.6rem 1.8rem;
     color: $white;
-    height: stretch;
+    height: auto;
 
     &--no-register {
       .locations__card-link {
