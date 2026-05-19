@@ -12,12 +12,13 @@
 
   &__decor {
     position: absolute;
-    top: 0;
-    right: -1rem;
+    top: -12rem;
+    right: -15rem;
     z-index: 0;
 
     @media (max-width: 1700px) {
-      right: -9rem;
+      right: -5rem;
+      top: -5rem;
       width: 60rem;
     }
 
@@ -35,9 +36,11 @@
   }
 
   &__logos {
+    position: relative;
     display: flex;
     justify-content: flex-start;
     gap: 7rem;
+    z-index: 5;
 
     @media (max-width: $mobile) {
       gap: 2rem;

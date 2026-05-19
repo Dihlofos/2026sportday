@@ -2,6 +2,7 @@
   position: relative;
   padding: 10.8rem 0 12.9rem;
   background: linear-gradient(332deg, #94191B -23.18%, #E51F2F 87.63%);
+  z-index: 1;
 
   @media (max-width: $tablet) {
     padding: 6.8rem 0 7.9rem;
