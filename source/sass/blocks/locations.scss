@@ -191,6 +191,16 @@
     }
   }
 
+  &__slider {
+    display: flex;
+    align-items: center;
+    gap: 4.5rem;
+
+    @media (max-width: $tablet) {
+      gap: 2rem;
+    }
+  }
+
   &__text {
     margin: 0 0 4rem;
     p:not(:last-child) {
