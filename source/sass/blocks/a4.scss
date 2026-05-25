@@ -12,6 +12,18 @@
     padding: 4rem 0 4rem;
   }
 
+  .locations__cards {
+
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      overflow: visible;
+
+      .locations__card {
+        width: 100%;
+      }
+    }
+  }
+
   .container {
     position: relative;
     z-index: 1;

@@ -19,7 +19,7 @@
     line-height: 1;
     cursor: pointer;
     border: 1px solid $red;
-    z-index: 5;
+    z-index: 6;
     transition: 0.2s box-shadow ease-in-out;
     border-radius: 30px;
     overflow: hidden;
@@ -47,6 +47,7 @@
 
     @media (max-width: $mobile) {
       font-size: 2rem;
+      z-index: 4;
     }
   }
 
@@ -69,7 +70,7 @@
     }
 
     @media(max-width: $mobile) {
-      padding: .5rem 0 3rem;;
+      padding: .5rem 0 0;
     }
 
 
@@ -111,7 +112,7 @@
     position: absolute;
     width: 100%;
     top: 0;
-    z-index: 4;
+    z-index: 5;
     overflow: hidden;
     max-height: 4rem;
     display: none;
@@ -127,7 +128,7 @@
     }
 
     @media (max-width: $mobile) {
-      bottom: 0;
+      bottom: 3.3rem;
       top: auto;
       max-height: 25px;
     }
