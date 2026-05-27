@@ -107,3 +107,8 @@ img {
 .partners-faq-bg {
   background: linear-gradient(180deg, #1C1C3A 3.47%, #312783 93.06%), #0C0E1A;
 }
+
+.dummy {
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+}
