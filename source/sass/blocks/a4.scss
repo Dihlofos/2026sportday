@@ -153,11 +153,17 @@
   }
 
   &__bullit {
-    background-color: $white;
-    color: $purple;
+
+    background-color: $purple;
+      color: $white;
     padding: 2.6rem 2.6rem 2.3rem;
     border-radius: 30px;
     text-align: center;
+
+    &--accent {
+      background-color: $white;
+      color: $purple;
+    }
 
     @media (max-width: $tablet) {
       padding: 1.6rem;
