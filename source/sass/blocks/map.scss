@@ -20,7 +20,8 @@
   }
   .container {
     position: relative;
-    padding: 11.2rem 0 17rem;
+    padding: 11.2rem 7rem 17rem;
+    max-width: 100%;
 
     @media (max-width: $tablet) {
       padding: 1.6rem 2.4rem 0;
@@ -64,11 +65,46 @@
     }
   }
 
+    &__list-container {
+      position: absolute;
+      width: 24%;
+      height: 87.3rem;
+      margin: 8.1rem 0 0;
+      left: -0.6rem;
+      top:0;
+      background-color: rgba($red, 0.1);
+      z-index: 10;
+      backdrop-filter: blur(10px);
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0.6rem;
+        width: 1px;
+        height: 100%;
+        background-color: $white;
+        z-index: 1;
+      }
+
+      @media (max-width: $tablet) {
+        position: static;
+        width: 100%;
+        height: auto;
+        margin: 0;
+        &:before {
+          display: none;
+        }
+      }
+    }
+
+
   &__map {
     position: relative;
-    width: 148.1%;
-    max-width: 179.6rem;
-    margin-left: 29.5%;
+    width: 145.1%;
+    max-width: 200rem;
+    // margin-left: 29.5%;
+    margin-left: 6rem;
     margin-top: -10.4rem;
     z-index: 7;
 
@@ -296,35 +332,6 @@
 
   }
 
-  &__list-container {
-    position: absolute;
-    width: 36%;
-    height: 60.3rem;
-    margin: 8.1rem 0 0;
-    left: -0.6rem;
-    top:0;
-
-    &:before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0.6rem;
-      width: 1px;
-      height: 100%;
-      background-color: $white;
-      z-index: 1;
-    }
-
-    @media (max-width: $tablet) {
-      position: static;
-      width: 100%;
-      height: auto;
-      margin: 0;
-      &:before {
-        display: none;
-      }
-    }
-  }
 
    &__list-wrapper {
     overflow: auto;
