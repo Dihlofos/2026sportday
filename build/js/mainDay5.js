@@ -204,7 +204,7 @@
   // ACTIONS
 
   setTimeout(() => {
-    mapScroller?.scroll({ left: 120 });
+    mapScroller?.scroll({ left: 180, behavior: "smooth" });
   }, 500);
 
   figures.forEach((figure) => {

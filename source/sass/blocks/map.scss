@@ -68,7 +68,7 @@
     &__list-container {
       position: absolute;
       width: 24%;
-      height: 87.3rem;
+      height: 90%;
       margin: 8.1rem 0 0;
       left: -0.6rem;
       top:0;
@@ -87,11 +87,18 @@
         z-index: 1;
       }
 
+      @media (max-width: 1500px) {
+        height: 50rem;
+      }
+
+
       @media (max-width: $tablet) {
         position: static;
         width: 100%;
         height: auto;
         margin: 0;
+        backdrop-filter: none;
+        background: none;
         &:before {
           display: none;
         }
@@ -102,22 +109,17 @@
   &__map {
     position: relative;
     width: 145.1%;
-    max-width: 200rem;
+    max-width: 116%;
     // margin-left: 29.5%;
-    margin-left: 6rem;
+    margin-left: 0rem;
     margin-top: -10.4rem;
     z-index: 7;
 
-    @media (max-width: 1680px) {
-      width: 130%;
-      margin-top: -6.6rem;
-      margin-left: 28.8%;
-    }
 
 
     @media (max-width: $tablet) {
       margin: 0;
-      max-width: 140.2rem;
+      max-width: 135%;
       width: 193%;
       margin-top: -3.25rem;
       margin-left: -18.8rem;
@@ -192,7 +194,7 @@
 
   &__modal {
     position: absolute;
-    top: 29rem;
+    top: 14rem;
     left: 36rem;
     z-index: 115;
     width: 42.2rem;
@@ -376,6 +378,10 @@
     height: 100%;
     padding-left: 3rem;
     margin: 0;
+
+    @media (max-width: 1500px) {
+      padding-left: 1rem;
+    }
 
     @media (max-width: $tablet) {
       position: relative;
