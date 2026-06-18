@@ -55,7 +55,7 @@
   }
 
   // 32 убрать, когда заработает.
-  const numbersWithoutAction = [];
+  const numbersWithoutAction = ["3"];
 
   const concertNumber = "20";
   const childZone = []; // TODO Поменять, когда нумерацию заменят!
