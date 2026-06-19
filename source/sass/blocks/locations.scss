@@ -201,6 +201,19 @@
     }
   }
 
+  &__image-layer {
+    display: inline-block;
+    background-color: $white;
+    padding: 0.5rem 1rem;
+
+    @media (max-width: $mobile) {
+      width: 11.6rem;
+      img {
+        height: auto;
+      }
+    }
+  }
+
   &__text {
     margin: 0 0 4rem;
     p:not(:last-child) {
