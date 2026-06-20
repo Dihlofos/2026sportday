@@ -64,6 +64,10 @@
       margin-left: 1.6rem;
     }
   }
+    &__list {
+      padding: 2rem 0;
+
+    }
 
     &__list-container {
       position: absolute;
@@ -72,9 +76,10 @@
       margin: 8.1rem 0 0;
       left: -0.6rem;
       top:0;
-      background-color: rgba($red, 0.1);
       z-index: 10;
+            background-color: rgba($black, 0.2);
       backdrop-filter: blur(10px);
+
 
       &:before {
         content: '';
