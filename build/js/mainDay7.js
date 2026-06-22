@@ -194,7 +194,7 @@
   }
 
   // 32 убрать, когда заработает.
-  const numbersWithoutAction = ["3"];
+  const numbersWithoutAction = [];
 
   const concertNumber = "20";
   const childZone = []; // TODO Поменять, когда нумерацию заменят!
@@ -231,9 +231,21 @@
   function init() {
     const locationNumber = findGetParameter("locationId");
     const artObjectLinks = document.querySelectorAll(".js-art-object-link");
+
+
+
+    const element = document.querySelector(`[data-location="${locationNumber}"]`);
+
+    console.log('locationNumber', element);
+
     if (locationNumber) {
       setTimeout(() => {
-        onGoToLocation(locationNumber);
+        element.scrollIntoView({ behavior: "auto", block: "center" });
+        element.classList.add("is-active");
+
+
+
+
       }, 0);
     }
 
