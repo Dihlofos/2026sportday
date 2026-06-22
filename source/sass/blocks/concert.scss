@@ -43,6 +43,7 @@
     display: flex;
     align-items: flex-start;
     gap: 3.6rem;
+    flex-wrap: wrap;
     margin: 0 0 8.2rem;
 
     @media (max-width: $mobile) {
@@ -160,6 +161,15 @@
     line-height: 1;
     text-align: center;
 
+  }
+
+  &__text {
+    width: 100%;
+    font-size: 2rem;
+
+    @media (max-width: $mobile) {
+      font-size: 1.6rem;
+    }
   }
 
   &__card-title {
