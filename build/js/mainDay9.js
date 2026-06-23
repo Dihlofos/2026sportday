@@ -170,7 +170,7 @@
     15: "Шахматы",
     16: "Беговелы",
     17: "Кубик Рубика",
-    18: "Женские тренировки от SM Stretching",
+    18: "Женские тренировки от&nbsp;SM&nbsp;Stretching",
     19: "Легкая атлетика, Беговые тренировки",
     20: "Концерт",
     21: "Турнир по мини-футболу",
@@ -232,20 +232,12 @@
     const locationNumber = findGetParameter("locationId");
     const artObjectLinks = document.querySelectorAll(".js-art-object-link");
 
-
-
     const element = document.querySelector(`[data-location="${locationNumber}"]`);
-
-    console.log('locationNumber', element);
 
     if (locationNumber) {
       setTimeout(() => {
         element.scrollIntoView({ behavior: "auto", block: "center" });
         element.classList.add("is-active");
-
-
-
-
       }, 0);
     }
 
@@ -363,7 +355,7 @@
       modalGoTo.href = `#locations-${locationNumber}`;
     }
 
-    modalText.textContent = locations[locationNumber];
+    modalText.innerHTML = DOMPurify.sanitize(locations[locationNumber]);
 
     let targetNumber = locationNumber;
 
@@ -448,7 +440,7 @@
       });
 
       itemSpan.textContent = `${index}`;
-      itemP.textContent = value;
+      itemP.innerHTML = DOMPurify.sanitize(value);
       itemLi.append(itemSpan);
       itemLi.append(itemP);
       container.append(itemLi);
