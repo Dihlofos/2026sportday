@@ -8,6 +8,10 @@
     padding: 6rem 0 8rem;
   }
 
+  @media (max-width: $tablet) {
+    padding: 8rem 0 8rem;
+  }
+
   &__decor {
     position: absolute;
     z-index: 0;
@@ -79,6 +83,22 @@
   .container {
     position: relative;
     z-index: 1;
+  }
+
+  &__logo {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    @media (max-width: $tablet) {
+      right: 2.4rem;
+    }
+
+    @media (max-width: $mobile) {
+      width: 11rem;
+      top: -7rem;
+      right: 1.4rem;
+    }
   }
 
   &__card {
