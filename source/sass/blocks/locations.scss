@@ -220,6 +220,13 @@
       margin: 0 0 2rem;
     }
 
+    &--subtitle {
+      font-size: 4rem;
+      margin: 4rem 0;
+      font-family: $mossport;
+      text-transform: uppercase;
+    }
+
     @media (max-width: $mobile) {
       margin: 0 0 0rem;
       font-size: 1.4rem;
